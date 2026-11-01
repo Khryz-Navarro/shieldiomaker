@@ -19,6 +19,7 @@ It runs entirely in the browser: no backend, no accounts, and nothing to deploy 
 - [Design system and product docs](#design-system-and-product-docs)
 - [Limitations](#limitations)
 - [Credits](#credits)
+- [License](#license)
 - [Author](#author)
 
 ---
@@ -205,6 +206,12 @@ When changing the UI, follow DESIGN.md. In particular, interface chrome stays ne
 - Badges rendered by **[Shields.io](https://shields.io)**.
 - Icons from **[Simple Icons](https://simpleicons.org)**, released under CC0. Brand icons are trademarks of their respective owners.
 - This project is not affiliated with or endorsed by Shields.io or Simple Icons.
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).
 
 ---
 
