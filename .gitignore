@@ -31,3 +31,4 @@ dist-ssr
 .claude/skills/impeccable/scripts/bin/
 PRODUCT.md
 DESIGN.md
+.impeccable/design.json
