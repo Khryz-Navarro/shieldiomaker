@@ -4,6 +4,8 @@ A browser-based editor for [Shields.io](https://shields.io) static badges, with 
 
 It runs entirely in the browser: no backend, no accounts, and nothing to deploy beyond static files.
 
+**Live site: https://khryz-navarro.github.io/shieldiomaker/**
+
 > Not affiliated with Shields.io or Simple Icons. Badges are rendered by `img.shields.io`.
 
 ---
@@ -139,7 +141,10 @@ Then open the local URL Vite prints (usually http://localhost:5173).
 npm run build
 ```
 
-The static site is written to `dist/` and can be hosted on any static host. Preview the build locally with `npm run preview`.
+The static site is written to `dist/`. Preview the build locally with `npm run preview`.
+
+### Deployment
+Every push to `master` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). It installs dependencies, runs the tests, builds, and publishes `dist/` to GitHub Pages. The site is served from `/shieldiomaker/`, which is set as `base` in [`vite.config.js`](vite.config.js); change it if the repo is renamed or hosted elsewhere.
 
 ---
 
