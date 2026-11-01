@@ -25,6 +25,17 @@ const TIPS = {
   format: 'Markdown and HTML wrap the whole badge in one link. "HTML, 2 links" uses <object> so each half keeps its own link, but GitHub strips it.',
 }
 
+// LinkedIn isn't in Simple Icons (removed at the brand's request), so its mark is inlined here.
+const LINKEDIN = {
+  path: 'M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z',
+}
+const SOCIALS = [
+  ['GitHub', 'https://github.com/Khryz-Navarro', bySlug.get('github')],
+  ['Facebook', 'https://www.facebook.com/navarro.khryz/', bySlug.get('facebook')],
+  ['LinkedIn', 'https://www.linkedin.com/in/khryz-navarro-5abb4b398/', LINKEDIN],
+  ['YouTube', 'https://www.youtube.com/@khryznavarro1521', bySlug.get('youtube')],
+]
+
 // Markdown and <img> can only wrap the whole badge in one link; separate halves need <object>.
 const attr = (s) => s.replaceAll('"', '&quot;')
 
@@ -434,7 +445,26 @@ export default function App() {
         </section>
       </main>
 
-      <footer>Not affiliated with Shields.io or Simple Icons. Badges are rendered by img.shields.io.</footer>
+      <footer>
+        <p>Not affiliated with Shields.io or Simple Icons. Badges are rendered by img.shields.io.</p>
+        {/* New tab, so following a link never throws away a badge in progress. */}
+        <nav className="socials" aria-label="Social links">
+          {SOCIALS.map(([name, href, icon]) => (
+            <a key={name} href={href} target="_blank" rel="noreferrer" aria-label={name} title={name}>
+              <Icon icon={icon} size={18} color="currentColor" />
+            </a>
+          ))}
+          <a href="https://khryz-navarro.github.io/portfolio/" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <g fill="none" stroke="currentColor" strokeWidth="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z" />
+              </g>
+            </svg>
+            Portfolio
+          </a>
+        </nav>
+      </footer>
     </div>
   )
 }

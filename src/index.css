@@ -157,7 +157,11 @@ main { display: grid; gap: 16px; }
 }
 .copy { padding: 8px 22px; font-weight: 600; }
 
-footer { margin-top: 24px; color: var(--muted); font-size: 0.8rem; }
+footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 24px; color: var(--muted); font-size: 0.8rem; }
+footer p { margin: 0; }
+.socials { display: flex; flex-wrap: wrap; gap: 4px; margin-right: -8px; }
+.socials a { display: inline-flex; align-items: center; gap: 6px; padding: 8px; color: var(--muted); font-size: 0.9rem; text-decoration: none; border-radius: 6px; }
+.socials a:hover { color: var(--text); }
 
 @media (max-width: 760px) {
   .page { padding: 0 16px 24px; }
