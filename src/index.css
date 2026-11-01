@@ -42,10 +42,11 @@ input:disabled, button:disabled { opacity: 0.5; cursor: not-allowed; }
 fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 legend { padding: 0; }
 
-.page { max-width: 1120px; margin: 0 auto; padding: 0 24px 32px; }
+.page { display: flex; flex-direction: column; min-height: 100dvh; max-width: 1120px; margin: 0 auto; padding: 0 24px 32px; }
 .top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 24px; padding: 20px 0 16px; }
 .top h1 { margin: 0; font-size: 1.6rem; line-height: 1.2; }
-main { display: grid; gap: 16px; }
+/* main takes the leftover height so the footer rests at the bottom of short pages. */
+main { flex: 1; display: grid; align-content: start; gap: 16px; }
 
 .field { display: grid; gap: 4px; font-size: 0.9rem; color: var(--muted); }
 .field input { color: var(--text); }
