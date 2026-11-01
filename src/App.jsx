@@ -446,10 +446,7 @@ export default function App() {
       </main>
 
       <footer>
-        <div>
-          <p>© 2026 Khryz Navarro. All rights reserved.</p>
-          <p>Not affiliated with Shields.io or Simple Icons. Badges are rendered by img.shields.io.</p>
-        </div>
+        <p>© 2026 Khryz Navarro. All rights reserved.</p>
         {/* New tab, so following a link never throws away a badge in progress. */}
         <nav className="socials" aria-label="Social links">
           {SOCIALS.map(([name, href, icon]) => (

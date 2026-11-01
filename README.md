@@ -10,8 +10,6 @@ It runs entirely in the browser: no backend, no accounts, and nothing to deploy 
 
 **Live site: https://khryz-navarro.github.io/shieldiomaker/**
 
-> Not affiliated with Shields.io or Simple Icons. Badges are rendered by `img.shields.io`.
-
 ---
 
 ## Contents
@@ -186,7 +184,6 @@ shieldiomaker/
 │   ├── badge.js            Pure helpers: badge URL, text color, custom logo checks
 │   ├── badge.test.js       Tests for badge.js (node --test)
 │   └── index.css           Styles and design tokens (light and dark)
-└── .impeccable/            Design tooling data (design.json sidecar, surface brief, detector config)
 ```
 
 ### Tech stack

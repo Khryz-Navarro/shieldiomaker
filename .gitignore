@@ -24,11 +24,8 @@ dist-ssr
 *.sw?
 
 # Impeccable working files
-.impeccable/config.local.json
-.impeccable/review/
-.impeccable/mocks/
+.impeccable/
 .claude/settings.local.json
 .claude/skills/impeccable/scripts/bin/
 PRODUCT.md
 DESIGN.md
-.impeccable/design.json
