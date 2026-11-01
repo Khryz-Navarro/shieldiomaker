@@ -22,7 +22,6 @@ It runs entirely in the browser: no backend, no accounts, and nothing to deploy 
 - [Getting started](#getting-started)
 - [Scripts](#scripts)
 - [Project structure](#project-structure)
-- [Design system and product docs](#design-system-and-product-docs)
 - [Limitations](#limitations)
 - [Credits](#credits)
 - [License](#license)
@@ -187,8 +186,6 @@ shieldiomaker/
 │   ├── badge.js            Pure helpers: badge URL, text color, custom logo checks
 │   ├── badge.test.js       Tests for badge.js (node --test)
 │   └── index.css           Styles and design tokens (light and dark)
-├── PRODUCT.md              Product context: users, purpose, constraints
-├── DESIGN.md               Design system: tokens, rules, components
 └── .impeccable/            Design tooling data (design.json sidecar, surface brief, detector config)
 ```
 
@@ -198,16 +195,6 @@ shieldiomaker/
 - [`simple-icons`](https://www.npmjs.com/package/simple-icons) 16 for icon titles, slugs, brand colors and SVG paths
 - [Oxlint](https://oxc.rs) for linting
 - Node's built-in `node:test` for tests
-
----
-
-## Design system and product docs
-
-- **[PRODUCT.md](PRODUCT.md)** records who the tool is for, what it does differently, and its constraints (client-only, fast first load, no affiliation).
-- **[DESIGN.md](DESIGN.md)** documents the "Quiet Workbench" design system: the Graphite Lilac neutrals with a single Workbench Violet accent, flat surfaces with no shadows, the type scale, layout, components, and named rules such as _The Badge Is the Color_ and _The Flat Bench Rule_.
-- **`.impeccable/`** holds the machine-readable version of the design system (`design.json`) and the homepage's design brief, used by the Impeccable design skill.
-
-When changing the UI, follow DESIGN.md. In particular, interface chrome stays neutral; strong color belongs to the badge and the icons.
 
 ---
 
