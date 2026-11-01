@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/favicon.svg" alt="Badge Maker icon: a grey and violet badge with a text caret" width="96" />
+</p>
+
 # Shields.io Badge Maker
 
 A browser-based editor for [Shields.io](https://shields.io) static badges, with logos from [Simple Icons](https://simpleicons.org). You type straight onto a large live badge, pick a brand icon visually, and copy the result as Markdown, HTML or a plain URL.
