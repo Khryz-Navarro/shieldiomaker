@@ -35,6 +35,7 @@ const SOCIALS = [
   ['LinkedIn', 'https://www.linkedin.com/in/khryz-navarro-5abb4b398/', LINKEDIN],
   ['YouTube', 'https://www.youtube.com/@khryznavarro1521', bySlug.get('youtube')],
 ]
+const SUPPORT_URL = 'https://buymeacoffee.com/khryznavarz'
 
 // Markdown and <img> can only wrap the whole badge in one link; separate halves need <object>.
 const attr = (s) => s.replaceAll('"', '&quot;')
@@ -443,6 +444,14 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        <p className="support">
+          Saved you some time?{' '}
+          <a href={SUPPORT_URL} target="_blank" rel="noreferrer">
+            <Icon icon={bySlug.get('buymeacoffee')} size={16} color="currentColor" />
+            Buy me a coffee
+          </a>
+        </p>
       </main>
 
       <footer>
